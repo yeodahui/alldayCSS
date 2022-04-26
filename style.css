@@ -1,0 +1,213 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* reset */
+body,
+h1,
+h2,
+p,
+div,
+span,
+a,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.txt_ir {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 1px;
+  color: transparent;
+}
+
+/* settings */
+:root {
+  --bg: #222;
+  --bg-card: #111;
+  --primary: #1c90ff;
+  --tit: #ddd;
+  --txt: #4a4a4a;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* design */
+body {
+  background-color: var(--bg);
+  color: var(--tit);
+}
+
+.header {
+  display: flex;
+  height: 630px;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(images/cover.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  text-align: center;
+}
+
+.title {
+  margin-top: auto;
+  padding: 15px;
+  font-size: 1.6rem;
+}
+
+.txt-photoshop {
+  display: block;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-top: 1em;
+  font-size: 2.5rem;
+}
+
+.txt-photoshop::before {
+  content: "";
+  display: block;
+  margin: 0 0 -1em -0.5em;
+  background-color: rgba(28, 145, 255, 0.4);
+  height: 5px;
+  border-radius: 5px;
+}
+
+.list-history {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.list-history::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  margin: 90px auto 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 3px;
+  height: auto;
+  background-color: var(--primary);
+}
+
+.item-history {
+  margin: 80px 0 -100px;
+  padding: 15px 20px 0 20px;
+  position: relative;
+  width: 40%;
+  background-color: var(--bg-card);
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+
+.item-history:nth-child(even) {
+  margin-left: auto;
+}
+
+.item-history:nth-child(odd)::after,
+.item-history:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: var(--bg-card);
+  transform: rotate(45deg);
+}
+
+.item-history:nth-child(odd)::after {
+  right: -10px;
+}
+
+.item-history:nth-child(even)::before {
+  left: -10px;
+}
+
+.item-history:nth-child(odd)::before,
+.item-history:nth-child(even)::after {
+  content: "";
+  position: absolute;
+  top: 45%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: solid 3px var(--primary);
+  border-radius: 50%;
+  background-color: var(--bg);
+}
+
+.item-history:nth-child(odd)::before {
+  right: calc(-58px);
+}
+.item-history:nth-child(even)::after {
+  left: calc(-58px);
+}
+
+.item-history h2 {
+  margin-bottom: 5px;
+  color: var(--primary);
+  font-size: 4.5rem;
+  font-weight: 900;
+  float: right;
+  clear: both;
+}
+
+.tit-photoshop {
+  float: right;
+  clear: both;
+  margin-bottom: 25px;
+}
+
+.img-ico {
+  position: relative;
+  margin-top: -70px;
+}
+
+.cont-content {
+  margin-top: 20px;
+  padding: 20px;
+  padding-left: 2rem;
+  clear: both;
+  background-color: #000;
+  color: var(--txt);
+  border-radius: 20px 20px 0 0;
+}
+
+.cont-content li::before {
+  content: " ";
+  display: inline-block;
+  margin-right: 8px;
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: var(--txt);
+  border-radius: 50%;
+}
