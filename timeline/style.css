@@ -121,8 +121,9 @@ body {
 .item-history {
   margin: 80px 0 -100px;
   padding: 15px 20px 0 20px;
+  box-sizing: border-box;
   position: relative;
-  width: 40%;
+  width: 50%;
   background-color: var(--bg-card);
   border-radius: 15px;
   font-size: 1.2rem;
@@ -166,10 +167,10 @@ body {
 }
 
 .item-history:nth-child(odd)::before {
-  right: calc(-58px);
+  right: -48px;
 }
 .item-history:nth-child(even)::after {
-  left: calc(-58px);
+  left: -48px;
 }
 
 .item-history h2 {

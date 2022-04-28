@@ -1,0 +1,129 @@
+/* CSS Resets */
+body,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Layouts */
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Components */
+.header {
+  background-color: orange;
+}
+
+.main {
+  background-color: #999;
+  padding: 40px 0;
+}
+
+.timeline {
+  border: 10px solid blue;
+  margin: 0 -40px;
+  position: relative;
+}
+
+/* .timeline::before {
+  content: "wow";
+  background-color: red;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10px;
+  margin: 0 auto;
+} */
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 0 40px;
+  box-sizing: border-box;
+  /* margin-bottom: -100px; */
+  outline: 1px solid red;
+}
+
+.timeline-item::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  margin: 0 -5px;
+  background-color: red;
+  transform: translateY(50%);
+}
+
+.timeline-item::after {
+  /* 동글뱅이 */
+  content: "meow";
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  margin: auto -10px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 6px solid dodgerblue;
+}
+
+.timeline-item:nth-of-type(odd)::before {
+  right: 0;
+  background-color: palevioletred;
+}
+
+.timeline-item:nth-of-type(even)::before {
+  left: 0;
+}
+.timeline-item:nth-of-type(odd)::after {
+  right: 0;
+}
+
+.timeline-item:nth-of-type(even)::after {
+  left: 0;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-item:nth-of-type(even) {
+  margin-left: auto;
+}
+
+.year {
+  background-color: #222;
+  color: white;
+  min-height: 400px;
+  position: relative;
+}
+
+.year::before {
+  content: " ";
+  background-color: #222;
+  position: absolute;
+  margin: auto -15px;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+.year_left::before {
+  right: 0;
+}
+.year_right::before {
+  left: 0;
+}
