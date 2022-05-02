@@ -1,17 +1,4 @@
-/* reset */
-body,
-h1,
-h2,
-h3,
-p,
-a {
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
+@import "reset.css";
 
 /* setting */
 :root {
@@ -19,7 +6,122 @@ a {
   --txt-content: #7a7a7a;
 }
 
+html {
+  font-size: 12px;
+}
+
+.txt-ir {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 1px;
+  color: transparent;
+}
+
+/* components */
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 /* design */
 body {
   background-color: #222;
+}
+
+.cont-detail {
+  margin-top: 50px;
+  background-color: #111;
+}
+
+/* cover 영역  */
+.cont-cover {
+  position: relative;
+}
+
+.cont-cover::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, #111 0%, rgba(17, 17, 17, 0) 100%);
+}
+
+/* info 영역 */
+.cont-info {
+  position: relative;
+  display: flex;
+  flex-wrap: no-wrap;
+  margin-top: -100px;
+  padding: 0 35px 40px;
+  font-weight: 500;
+  color: var(--txt-content);
+}
+
+/* left */
+.cont-info-left {
+  flex-basis: 75%;
+}
+
+.link_new {
+  padding: 3px calc(13px - 5px) 4px 13px;
+  letter-spacing: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: #ff4500;
+  color: #fff;
+  border: solid 0px #ca3701;
+  border-bottom-width: 5px;
+  border-radius: 3px;
+}
+
+.tit {
+  padding: 10px 10px 0 0;
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: var(--txt-heading);
+}
+
+.txt-description {
+  margin: 25px 0;
+  width: 85%;
+  line-height: 22px;
+}
+
+/* right */
+.cont-info-right {
+  margin-top: 20px;
+  flex-basis: 25%;
+}
+
+.tag-label {
+  color: var(--txt-heading);
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.list-genre li {
+  display: inline-block;
+  margin: 0 0 5px;
+  padding: 3px 12px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: #222;
+}
+
+.list-casts li {
+  display: inline-block;
+  margin-right: -15px;
+  width: 50px;
+  height: 50px;
+}
+
+.list-casts li img {
+  border: solid 5px #111;
+  border-radius: 50%;
 }
