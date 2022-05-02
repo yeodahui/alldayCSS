@@ -1,0 +1,25 @@
+/* reset */
+body,
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* setting */
+:root {
+  --txt-heading: #fff;
+  --txt-content: #7a7a7a;
+}
+
+/* design */
+body {
+  background-color: #222;
+}
